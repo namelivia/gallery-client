@@ -11,7 +11,7 @@ const router = new Router({
       path: '/',
       name: 'welcome',
       component: () => import('./views/Welcome.vue'),
-    }
+    },
   ],
 })
 
