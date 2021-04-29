@@ -25,6 +25,13 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       -
+        name: Populate production .env
+        run: |
+          touch .env.production
+          echo VUE_APP_API_ENDPOINT=${{ secrets.API_ENDPOINT }}  >> .env.production
+          echo VUE_APP_I18N_LOCALE=es  >> .env.production
+          echo VUE_APP_I18N_FALLBACK_LOCALE=es  >> .env.production
+      -
         name: Build and push production container
         id: docker_build
         uses: docker/build-push-action@v2
