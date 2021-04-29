@@ -11,14 +11,6 @@ jobs:
         name: Set up QEMU
         uses: docker/setup-qemu-action@v1
       -
-        name: Populate production .env
-        run: |
-          touch .env.production
-          echo VUE_APP_API_ENDPOINT=${{ secrets.API_ENDPOINT }}  >> .env.production
-          echo VUE_APP_I18N_LOCALE=es  >> .env.production
-          echo VUE_APP_I18N_FALLBACK_LOCALE=es  >> .env.production
-          cat .env.production
-      -
         name: Set up development Docker Buildx
         id: development_builder
         uses: docker/setup-buildx-action@v1
