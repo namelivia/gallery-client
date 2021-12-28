@@ -16,12 +16,12 @@ section
 </template>
 
 <script>
-import Card from './components/Card'
+import ImageCard from './components/ImageCard'
 import { getImages } from '@/apis/apis'
 //import { errorToast } from '@/helpers/ui'
 export default {
   components: {
-    ImageCard: Card,
+    ImageCard: ImageCard,
   },
   data: function () {
     return {

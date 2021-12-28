@@ -1,9 +1,9 @@
 <template lang="pug">
-    a(:href="url")
-        card
-            card-image(:src="url" :alt="name")
-            card-body(:title="")
-              span {{ formattedTimestamp }}
+  a(:href="url")
+    card
+      card-image(:src="url" alt="image")
+      card-body(:title="image")
+        span {{ formattedTimestamp }}
 </template>
 <script>
 export default {
