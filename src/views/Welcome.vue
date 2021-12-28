@@ -1,28 +1,27 @@
 <template lang="pug">
 section
-    h3(v-if='loading' ) Loading...
-    div(v-else)
-        b-card-group(columns)
-            card(
-                v-for='image in images' :key='image.url'
-                :url="image.url"
-                :timestamp="image.date"
-            )
-        nav(aria-label="Pagination")
-            ul.pagination
-                li.page-item(v-if='showPrevious')
-                    a.page-link(:href="previousPage") Anterior
-                li.page-item.ml-auto
-                    a.page-link(:href="nextPage") Siguiente
+    loading(v-if='loading')
+    card-grid(v-else)
+      image-card(
+          v-for='image in images' :key='image.url'
+          :url="image.url"
+          :timestamp="image.date"
+      )
+    nav(aria-label="Pagination")
+        ul.pagination
+            li.page-item(v-if='showPrevious')
+                a.page-link(:href="previousPage") Anterior
+            li.page-item.ml-auto
+                a.page-link(:href="nextPage") Siguiente
 </template>
 
 <script>
 import Card from './components/Card'
 import { getImages } from '@/apis/apis'
-import { errorToast } from '@/helpers/ui'
+//import { errorToast } from '@/helpers/ui'
 export default {
   components: {
-    card: Card,
+    ImageCard: Card,
   },
   data: function () {
     return {
@@ -51,7 +50,7 @@ export default {
       try {
         this.images = await getImages(this.page)
       } catch (err) {
-        this.$bvToast.toast(`Images can't be retrieved`, errorToast)
+        //this.$bvToast.toast(`Images can't be retrieved`, errorToast)
       } finally {
         this.loading = false
       }

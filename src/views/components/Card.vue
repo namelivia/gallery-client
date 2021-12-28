@@ -1,9 +1,9 @@
 <template lang="pug">
     a(:href="url")
-        b-card.mb-2.no-body
-            b-card-img-lazy(:src="url" :alt="name" top ref="image")
-            b-card-body.text-center.pb-0
-                | {{ formattedTimestamp }}
+        card
+            card-image(:src="url" :alt="name")
+            card-body(:title="")
+              span {{ formattedTimestamp }}
 </template>
 <script>
 export default {
