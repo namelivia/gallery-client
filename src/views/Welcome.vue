@@ -1,18 +1,20 @@
 <template lang="pug">
 section
     loading(v-if='loading')
-    card-grid(v-else)
-      image-card(
-          v-for='image in images' :key='image.url'
-          :url="image.url"
-          :timestamp="image.date"
+    div(v-else)
+      card-grid
+        image-card(
+            v-for='image in images' :key='image.url'
+            :url="image.url"
+            :timestamp="image.date"
+        )
+      pagination(
+        previous-label="Anterior"
+        next-label="Siguiente"
+        :show-previous="showPrevious"
+        :previous-link="previousPage"
+        :next-link="nextPage"
       )
-    nav(aria-label="Pagination")
-        ul.pagination
-            li.page-item(v-if='showPrevious')
-                a.page-link(:href="previousPage") Anterior
-            li.page-item.ml-auto
-                a.page-link(:href="nextPage") Siguiente
 </template>
 
 <script>
