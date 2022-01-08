@@ -18,7 +18,7 @@ section
 </template>
 
 <script>
-import ImageCard from './components/ImageCard'
+import ImageCard from '@/views/components/ImageCard.vue'
 import { getImages } from '@/apis/apis'
 //import { errorToast } from '@/helpers/ui'
 export default {
