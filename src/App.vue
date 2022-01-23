@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import store from './currentUser'
+import { store } from '@namelivia/vue-currentuser'
 export default {
   data: function () {
     return {
@@ -19,7 +19,7 @@ export default {
   },
   methods: {
     async getCurrentUser() {
-      const currentUser = await store.getCurrentUser()
+      const currentUser = await store.getCurrentUser(import.meta.env.VITE_APP_API_ENDPOINT)
       this.currentUserEmail = currentUser.email
     },
   },
