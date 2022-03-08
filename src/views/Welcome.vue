@@ -20,7 +20,7 @@ section
 <script>
 import ImageCard from '@/views/components/ImageCard.vue'
 import { getImages } from '@/apis/apis'
-//import { errorToast } from '@/helpers/ui'
+import { useToast } from 'vue-toastification'
 export default {
   components: {
     ImageCard: ImageCard,
@@ -49,10 +49,11 @@ export default {
   },
   methods: {
     async loadList() {
+      const toast = useToast()
       try {
         this.images = await getImages(this.page)
       } catch (err) {
-        //this.$bvToast.toast(`Images can't be retrieved`, errorToast)
+        toast.error(`Images can't be retrieved`)
       } finally {
         this.loading = false
       }
