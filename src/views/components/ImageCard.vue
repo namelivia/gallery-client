@@ -4,6 +4,8 @@ a(:href="url")
     card-image(:src="url" alt="image")
     card-body(:title="image")
       span {{ formattedTimestamp }}
+      br
+      span(v-for="label in labels") |{{ label }}|
 </template>
 <script>
 export default {
@@ -15,6 +17,10 @@ export default {
     timestamp: {
       type: String,
       default: '',
+    },
+    labels: {
+      type: Array,
+      default: [],
     },
   },
   computed: {

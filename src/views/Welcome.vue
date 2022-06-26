@@ -6,6 +6,7 @@ section
         image-card(
             v-for='image in images' :key='image.url'
             :url="image.url"
+            :labels="image.labels"
             :timestamp="image.date"
         )
       pagination(
