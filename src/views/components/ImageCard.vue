@@ -5,7 +5,7 @@ a(:href="url")
     card-body(:title="image")
       span {{ formattedTimestamp }}
       br
-      badge(v-for="label in labels") {{ label }}
+      badge(v-for="label in labels" :text="label")
 </template>
 <script>
 export default {
