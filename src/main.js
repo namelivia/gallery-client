@@ -23,6 +23,7 @@ import {
   Container,
   StyledTable,
   Pagination,
+  Badge,
 } from '@namelivia/vue-components'
 
 const app = createApp(App)
@@ -49,5 +50,6 @@ app.component('Navbar', Navbar)
 app.component('Container', Container)
 app.component('StyledTable', StyledTable)
 app.component('Pagination', Pagination)
+app.component('Badge', Badge)
 
 app.mount('#app')
