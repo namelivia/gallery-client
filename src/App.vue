@@ -4,6 +4,8 @@
     :links="links"
     :locale="$i18n.locale"
     :current-user-email="currentUserEmail"
+    :current-user-name="currentUserName"
+    :current-user-picture="currentUserPicture"
     title="Gallery App"
     :imageBig="imageBigUrl"
     :imageSmall="imageSmallUrl"
@@ -18,6 +20,8 @@ export default {
   data: function () {
     return {
       currentUserEmail: undefined,
+      currentUserName: undefined,
+      currentUserPicture: undefined,
       links: []
     }
   },
@@ -37,6 +41,8 @@ export default {
     async getCurrentUser() {
       const currentUser = await store.getCurrentUser(import.meta.env.VITE_APP_API_ENDPOINT)
       this.currentUserEmail = currentUser.email
+      this.currentUserName = currentUser.name
+      this.currentUserPicture = currentUser.picture
     },
   },
 }
