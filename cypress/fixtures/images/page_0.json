@@ -1,1 +1,101 @@
-[]
+[
+  {
+    "url": "https://picsum.photos/640/480",
+    "date": "2023-07-11T12:20:26+00:00",
+    "labels": [
+      "Indoors",
+      "Nature",
+      "Outdoors",
+      "Weather"
+    ]
+  },
+  {
+    "url": "https://picsum.photos/640/480",
+    "date": "2023-07-11T12:16:17+00:00",
+    "labels": [
+      "City",
+      "Electrical Device",
+      "Indoors",
+      "Nature",
+      "Outdoors",
+      "Person",
+      "Switch"
+    ]
+  },
+  {
+    "url": "https://picsum.photos/640/480",
+    "date": "2023-07-11T12:12:46+00:00",
+    "labels": [
+      "Indoors",
+      "Nature",
+      "Outdoors",
+      "Person"
+    ]
+  },
+  {
+    "url": "https://picsum.photos/640/480",
+    "date": "2023-07-11T12:09:38+00:00",
+    "labels": [
+      "Indoors",
+      "Nature",
+      "Outdoors",
+      "Weather"
+    ]
+  },
+  {
+    "url": "https://picsum.photos/640/480",
+    "date": "2023-07-11T12:07:35+00:00",
+    "labels": [
+      "Indoors",
+      "Nature",
+      "Outdoors",
+      "Weather"
+    ]
+  },
+  {
+    "url": "https://picsum.photos/640/480",
+    "date": "2023-07-11T11:17:26+00:00",
+    "labels": [
+      "Indoors",
+      "Nature",
+      "Outdoors"
+    ]
+  },
+  {
+    "url": "https://picsum.photos/640/480",
+    "date": "2023-07-11T11:16:41+00:00",
+    "labels": [
+      "Indoors",
+      "Nature",
+      "Outdoors",
+      "Weather"
+    ]
+  },
+  {
+    "url": "https://picsum.photos/640/480",
+    "date": "2023-07-11T11:16:13+00:00",
+    "labels": [
+      "Car",
+      "Indoors",
+      "Nature",
+      "Outdoors",
+      "Person",
+      "Transportation",
+      "Vehicle",
+      "Weather"
+    ]
+  },
+  {
+    "url": "https://picsum.photos/640/480",
+    "date": "2023-07-11T11:12:09+00:00",
+    "labels": [
+      "Car",
+      "Indoors",
+      "Nature",
+      "Outdoors",
+      "Person",
+      "Transportation",
+      "Vehicle"
+    ]
+  }
+]
